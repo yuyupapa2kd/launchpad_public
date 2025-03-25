@@ -1,19 +1,20 @@
-# Sample Hardhat Project
+# launchpad
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+### 실행환경 설정
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+```
+git clone https://github.com/yuyupapa2kd/launchpad_public.git
+npm install -d
+npx hardhat compile
 ```
 
+### 컨트랙트 배포
+```
+npx hardhat run scripts/deploy-launchpad.ts --network dev
+```
 
-npm install --save-dev @openzeppelin/contracts
-
-npm install --save-dev ts-node typechain typescript
-
+### 테스트 스크립트 실행
+```
+npx hardhat typechain
+REPORT_GAS=true npx hardhat test
+```
